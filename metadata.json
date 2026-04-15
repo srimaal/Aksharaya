@@ -1,6 +1,6 @@
 {
-  "name": "Sinhala Text Corrector",
-  "description": "A real-time Sinhala text correction and grammar enhancement tool powered by Gemini AI.",
+  "name": "Akshara - Sinhala AI Text Corrector",
+  "description": "Akshara is a real-time Sinhala grammar and spelling corrector powered by Gemini AI. Fix errors, improve flow, and perfect your Sinhala writing instantly.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

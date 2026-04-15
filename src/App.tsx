@@ -85,7 +85,13 @@ export default function App() {
     } catch (err: any) {
       if (err.name !== 'AbortError') {
         console.error('Correction error:', err);
-        setError('යම් දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න.');
+        
+        // Handle Quota/Credit exhaustion specifically
+        if (err.message?.includes('429') || err.message?.toLowerCase().includes('quota')) {
+          setError('දෛනික සීමාව ඉක්මවා ඇත. කරුණාකර මද වේලාවකින් නැවත උත්සාහ කරන්න. (Daily limit exceeded. Please try again later.)');
+        } else {
+          setError('යම් දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න.');
+        }
       }
     } finally {
       setIsChecking(false);
