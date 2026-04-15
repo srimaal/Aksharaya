@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Sinhala:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Sinhala", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", serif;
+  
+  --color-theme-bg: #0c0d10;
+  --color-theme-header: #111318;
+  --color-theme-sidebar: #0f1115;
+  --color-theme-card: #16181d;
+  --color-theme-correction: #1c1f26;
+  --color-theme-accent: #c5a059;
+  --color-theme-border: #2a2d35;
+  --color-theme-text: #e0e0e0;
+  --color-theme-text-muted: #a0a0a0;
+}
+
+@layer base {
+  body {
+    @apply bg-theme-bg text-theme-text antialiased;
+  }
+}
