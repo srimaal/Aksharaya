@@ -99,7 +99,7 @@ export default function App() {
   };
 
   const debouncedCheck = useCallback(
-    debounce((text: string) => checkText(text), 1000),
+    debounce((text: string) => checkText(text), 3000),
     []
   );
 
